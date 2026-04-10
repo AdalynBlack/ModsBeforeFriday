@@ -187,6 +187,8 @@ class Wrapper():
             args.game_version = supported_versions[-1]
 
     def patch(self, args):
+        self.get_mod_status(args);
+
         if not self.mod_status['core_mods']:
             self.log('    \033[33m Core Mod data not found! Is your headset connected to the internet?', level=WARN)
             return
